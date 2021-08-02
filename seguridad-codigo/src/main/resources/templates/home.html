@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inicio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+  aaaa
+        <div th:each="producto: ${lista_productos}">
+            <img th:src = "${producto.foto}" style="height: 150px;"> 
+            <p th:text=${producto.nombre_p}></p>
+            <p th:text=${producto.descripcion}></p>
+            <p th:text=${producto.precio}></p>
+
+        </div>
+    </body>
+</html>
