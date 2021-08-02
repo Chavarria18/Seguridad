@@ -4,24 +4,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Inicio</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-<form th:action="@{/busqueda}" method="GET"> 
-    <input th:name="buscar">
-    <button type="submit">Buscar</button>
-</form>
-
-
-        <div th:each="producto: ${lista_productos}">
-            <img th:src = "${producto.foto}" style="height: 150px;"> 
+        <div th:each ="producto : ${productos}" >
             <p th:text=${producto.nombre_p}></p>
-            <p th:text=${producto.descripcion}></p>
-            <p th:text=${producto.precio}></p>
 
         </div>
+      
+        
+        <script src="" async defer></script>
     </body>
 </html>

@@ -2,11 +2,14 @@ package com.seguridad.seguridad;
 
 import java.util.List;
 
+import org.hibernate.annotations.Any;
+import org.hibernate.hql.internal.ast.SqlASTFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -56,6 +59,17 @@ public class controlador {
     public String login_error(final Model model, @PathVariable("error") String error) {
 
         return "login.html";
+    }
+
+    @RequestMapping(value = "/busqueda", method = RequestMethod.GET)
+    public String viewBusqueda(final Model model, @RequestParam(value = "buscar", required = false) String buscar) {
+       
+        String sql = "select *from seguridad.producto where nombre_p ='" + buscar + "'";
+        final List<Any> lista_producto = dao.buscar_producto(sql);
+        model.addAttribute("productos", lista_producto);
+        
+
+        return "busqueda.html";
     }
 
 

@@ -2,6 +2,8 @@ package com.seguridad.seguridad;
 
 import java.util.List;
 
+import org.aspectj.weaver.patterns.AnyAnnotationTypePattern;
+import org.hibernate.annotations.Any;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -46,6 +48,15 @@ public class Dao {
         List<Producto> info_productos = jdbcTemplate.query(sql,  BeanPropertyRowMapper.newInstance(Producto.class));
         return info_productos;    
     }
+
+    public List<Any> buscar_producto(String sql) {
+       
+       
+        List<Any> listaBusqueda = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Any.class));
+        return listaBusqueda;
+
+    }
+
 
 
 
