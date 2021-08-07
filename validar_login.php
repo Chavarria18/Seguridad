@@ -26,29 +26,6 @@ if(mysqli_num_rows($result) == 1){
 
 }
 
-/*
-echo "LOS USUARIOS";
-' or ''='
-while ($row = mysqli_fetch_array($result)){
-    $usuariov = $row['NOMBRE_U'];
-
-    $contraval = $row['CONTRASEÑA']; 
-}
-
-echo "LOS USUARIOS";
-echo $usuariov; 
-echo "000";
-echo $contraval; 
-    
-
-if($usuario == $usuariov  && $contraval == $contra ){
-    echo "si es el usuario y si es la contraseña"; 
-   
-    header('location:http://localhost/Seguridad/home.php'); 
-}else{
-    header('location:http://localhost/Seguridad/login.php'); 
-}
-  */
 
 
 } catch (Exception $e) {

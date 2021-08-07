@@ -14,7 +14,7 @@ $opt = [
 try	{
     $pdo = new PDO($dsn, $user, $pass, $opt);
 
-    echo "esta conectada";
+   // echo "esta conectada";
 $pdo = null;
 	}
 catch(PDOException $e)

