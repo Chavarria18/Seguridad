@@ -1,0 +1,20 @@
+#l {
+    background-color: rgba(31, 54, 82, 0.867);
+}
+#navbar {
+    background-color: rgba(31, 54, 82, 0.867);
+}
+
+body{
+    align-content: center;
+}
+#n1{
+    align-content: center;
+    color: black;
+    background-color: #fff;
+}
+#primary {
+    color: #fff;
+    background-color: #1a1c20;
+    border-color: #1a1c20;
+  }
