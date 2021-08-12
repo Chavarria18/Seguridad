@@ -38,11 +38,16 @@ require_once('/opt/lampp/htdocs/Seguridad/conexion.php');
 
             <form method="POST" action="http://localhost/Seguridad/validar_login.php" class="pure-form pure-form-stacked" id="form-login">
                 <label>Usuario</label>
-                <input name="usuario">
+                <input name="usuario" required>
                 <label>Contraseña</label>
-                <input name="contraseña">
+                <input name="contraseña" required>
                 <button type="submit" class="pure-button pure-button-primary">Login</button>
-
+                <div id="error"> 
+                <?php
+                if (isset($_GET["error"]) && $_GET["error"] == 'true') {
+                  echo "<p> Usuario o contrasaña incorrectos <p>";
+                } ?>
+                </div>
 
 
             </form>

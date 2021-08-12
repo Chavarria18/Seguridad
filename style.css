@@ -25,3 +25,6 @@ header{
 #form-login{
     margin-top: 50%;
 }
+#error{
+    color:red;
+}

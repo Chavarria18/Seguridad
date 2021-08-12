@@ -1,8 +1,12 @@
 #l {
     background-color: rgba(31, 54, 82, 0.867);
+    color:white;
+    z-index: auto;
+   
 }
 #navbar {
     background-color: rgba(31, 54, 82, 0.867);
+
 }
 
 body{
